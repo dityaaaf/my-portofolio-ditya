@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Oi&family=Risque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Oi&family=Risque&family=Sarina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lobster&family=Oi&family=Risque&family=Sarina&display=swap');
+
 @import "tailwindcss";
 
 .body {
     background-color: black;
+}
+@theme {
+    --font-oi: "Oi", sans-serif;
+}
+
+@theme {
+    --font-knewave: "Knewave", sans-serif;
+}
+
+@theme {
+    --font-risque: "Risque", sans-serif;
+}
+
+@theme {
+    --font-sarina: "Sarina", sans-serif;
+}
+
+@theme {
+    --font-lobster: "Lobster", sans-serif;
 }

@@ -1,4 +1,9 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Oi&family=Risque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Oi&family=Risque&family=Sarina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lobster&family=Oi&family=Risque&family=Sarina&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -20,6 +25,8 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-light: 300;
@@ -29,6 +36,11 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-oi: "Oi", sans-serif;
+    --font-knewave: "Knewave", sans-serif;
+    --font-risque: "Risque", sans-serif;
+    --font-sarina: "Sarina", sans-serif;
+    --font-lobster: "Lobster", sans-serif;
   }
 }
 @layer base {
@@ -180,11 +192,44 @@
   .top-full {
     top: 100%;
   }
-  .m-36 {
-    margin: calc(var(--spacing) * 36);
+  .mx-36 {
+    margin-inline: calc(var(--spacing) * 36);
+  }
+  .mt-36 {
+    margin-top: calc(var(--spacing) * 36);
+  }
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-15 {
+    margin-bottom: calc(var(--spacing) * 15);
   }
   .flex {
     display: flex;
+  }
+  .table {
+    display: table;
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-27 {
+    height: calc(var(--spacing) * 27);
+  }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-60 {
+    height: calc(var(--spacing) * 60);
+  }
+  .h-1000 {
+    height: calc(var(--spacing) * 1000);
   }
   .h-\[25rem\] {
     height: 25rem;
@@ -192,8 +237,11 @@
   .h-\[70\%\] {
     height: 70%;
   }
-  .h-\[300rem\] {
-    height: 300rem;
+  .h-\[120rem\] {
+    height: 120rem;
+  }
+  .h-\[150rem\] {
+    height: 150rem;
   }
   .h-full {
     height: 100%;
@@ -201,14 +249,53 @@
   .min-h-40 {
     min-height: calc(var(--spacing) * 40);
   }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-3\/4 {
+    width: calc(3/4 * 100%);
+  }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
   .w-75 {
     width: calc(var(--spacing) * 75);
+  }
+  .w-80 {
+    width: calc(var(--spacing) * 80);
+  }
+  .w-150 {
+    width: calc(var(--spacing) * 150);
+  }
+  .w-250 {
+    width: calc(var(--spacing) * 250);
   }
   .w-\[25\%\] {
     width: 25%;
   }
+  .w-\[50rem\] {
+    width: 50rem;
+  }
+  .w-\[80\%\] {
+    width: 80%;
+  }
+  .w-\[80\] {
+    width: 80;
+  }
+  .w-\[100\%\] {
+    width: 100%;
+  }
   .w-full {
     width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .flex-row {
     flex-direction: row;
@@ -222,11 +309,17 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .justify-evenly {
     justify-content: space-evenly;
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -285,6 +378,21 @@
   .text-right {
     text-align: right;
   }
+  .font-knewave {
+    font-family: var(--font-knewave);
+  }
+  .font-lobster {
+    font-family: var(--font-lobster);
+  }
+  .font-oi {
+    font-family: var(--font-oi);
+  }
+  .font-risque {
+    font-family: var(--font-risque);
+  }
+  .font-sarina {
+    font-family: var(--font-sarina);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -292,6 +400,10 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-7xl {
     font-size: var(--text-7xl);
@@ -314,6 +426,13 @@
   }
   .italic {
     font-style: italic;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
@@ -360,6 +479,26 @@
 .body {
   background-color: black;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -368,6 +507,11 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -433,8 +577,14 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
