@@ -212,11 +212,11 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
   }
   .h-27 {
     height: calc(var(--spacing) * 27);
@@ -226,9 +226,6 @@
   }
   .h-50 {
     height: calc(var(--spacing) * 50);
-  }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
   }
   .h-\[25rem\] {
     height: 25rem;
@@ -242,9 +239,6 @@
   .min-h-40 {
     min-height: calc(var(--spacing) * 40);
   }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
   .w-30 {
     width: calc(var(--spacing) * 30);
   }
@@ -256,9 +250,6 @@
   }
   .w-\[50rem\] {
     width: 50rem;
-  }
-  .w-\[100\%\] {
-    width: 100%;
   }
   .w-full {
     width: 100%;
@@ -272,8 +263,14 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .flex-row {
     flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -290,8 +287,14 @@
   .justify-evenly {
     justify-content: space-evenly;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .scroll-smooth {
     scroll-behavior: smooth;
@@ -342,14 +345,14 @@
   .p-7 {
     padding: calc(var(--spacing) * 7);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
-  .p-12 {
-    padding: calc(var(--spacing) * 12);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
@@ -360,11 +363,11 @@
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
   .text-right {
     text-align: right;
-  }
-  .font-knewave {
-    font-family: var(--font-knewave);
   }
   .font-lobster {
     font-family: var(--font-lobster);
@@ -374,9 +377,6 @@
   }
   .font-poppins {
     font-family: var(--font-poppins);
-  }
-  .font-risque {
-    font-family: var(--font-risque);
   }
   .font-sarina {
     font-family: var(--font-sarina);
@@ -461,6 +461,21 @@
       @media (hover: hover) {
         color: var(--color-blue-300);
       }
+    }
+  }
+  .md\:flex-nowrap {
+    @media (width >= 48rem) {
+      flex-wrap: nowrap;
+    }
+  }
+  .md\:gap-10 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:px-10 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 10);
     }
   }
 }
